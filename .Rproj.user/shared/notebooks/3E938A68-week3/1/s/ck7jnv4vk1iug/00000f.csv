@@ -1,0 +1,4 @@
+"0","knitr::include_graphics(here::here(""slides"", ""week3"", ""img"", ""303.png""))"
+"2","Error in knitr::include_graphics(here::here(""slides"", ""week3"", ""img"",  : 
+  Cannot find the file(s): ""/Users/kyleparrish/Documents/GitHub/history_of_spanish/slides/week3/img/303.png""
+"

@@ -1,0 +1,660 @@
+---
+title: "Historia de la lengua española"
+subtitle: "C3: Algunos Detalles"
+author: "Kyle Parrish"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+    css: xaringan-themer.css
+    seal: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: true
+      ratio: 16:9
+      slideNumberFormat: "%current%"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, include=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  # primary_color = "#345865",
+  primary_color = "#B56B6F",
+  secondary_color = "#2c8475",
+  black_color = "#4242424",
+  white_color = "#FFF",
+  base_font_size = "25px",
+  # text_font_family = "Jost",
+  # text_font_url = "https://indestructibletype.com/fonts/Jost.css",
+  header_font_google = google_font("Times New Roman", "400", "700"),
+  header_font_weight = "400",
+  inverse_header_color = "#eaeaea",
+  title_slide_text_color = "black",
+  text_slide_number_color = "#9a9a9a",
+  text_bold_color = "#f79334",
+  code_inline_color = "#B56B6F",
+  code_highlight_color = "transparent",
+  link_color = "#2c8475",
+  table_row_even_background_color = lighten_color("#345865", 0.9),
+  extra_fonts = list(
+    google_font("Times New Roman", "400")
+  ),
+  colors = c(
+    green = "#31b09e",
+    "green-dark" = "#2c8475",
+    highlight = "#87f9bb",
+    purple = "#887ba3",
+    pink = "#B56B6F",
+    orange = "#f79334",
+    red = "#dc322f",
+    `blue-dark` = "#002b36",
+    `text-dark` = "#202020",
+    `text-darkish` = "#424242",
+    `text-mild` = "#606060",
+    `text-light` = "#9a9a9a",
+    `text-lightest` = "#eaeaea"
+  ),
+  extra_css = list(
+    ".remark-slide-content h3" = list(
+      "margin-bottom" = 0, 
+      "margin-top" = 0
+    ),
+    ".smallish, .smallish .remark-code-line" = list(`font-size` = "0.9em")
+  )
+)
+xaringanExtra::use_xaringan_extra(c("tile_view", "animate_css", "tachyons", "share_again"))
+xaringanExtra::use_extra_styles()
+```
+
+
+```{r components, include=FALSE}
+slides_from_images <- function(
+  path,
+  regexp = NULL,
+  class = "hide-count",
+  background_size = "contain",
+  background_position = "top left"
+) {
+  if (isTRUE(getOption("slide_image_placeholder", FALSE))) {
+    return(glue::glue("Slides to be generated from [{path}]({path})"))
+  }
+  if (fs::is_dir(path)) {
+    imgs <- fs::dir_ls(path, regexp = regexp, type = "file", recurse = FALSE)
+  } else if (all(fs::is_file(path) && fs::file_exists(path))) {
+    imgs <- path
+  } else {
+    stop("path must be a directory or a vector of images")
+  }
+  imgs <- fs::path_rel(imgs, ".")
+  breaks <- rep("\n---\n", length(imgs))
+  breaks[length(breaks)] <- ""
+
+  txt <- glue::glue("
+  class: {class}
+  background-image: url('{imgs}')
+  background-size: {background_size}
+  background-position: {background_position}
+  {breaks}
+  ")
+
+  paste(txt, sep = "", collapse = "")
+}
+options("slide_image_placeholder" = FALSE)
+```
+
+class: left title-slide
+background-size: cover
+background-position: top center
+
+<br>
+<br>
+<br>
+<br>
+# La Historia de la lengua española
+
+## Semana 3
+
+---
+
+# Intro
+
+--
+
+.f3[
+En C1 y C2, hablamos del cambio causado por **fuerzas externas**.
+]
+
+--
+
+.f3[
+En C3, hablamos del **cambio interno**
+]
+
+
+---
+
+# El cambio interno…
+
+.f3[
+es un .purple[lento] proceso **sistemático**] 
+
+
+--
+
+
+.f4[
+hace que todas las lenguas sigan evolucionando continuamente (las lenguas nunca dejan de cambiar)
+]
+
+---
+
+## 3.1 DERIVADOS Y CULTISMOS
+
+.f4[
+En español moderno, hay muchos casos en los que dos palabras distintas vienen de la misma palabra latina.
+]
+
+--
+
+.f4[
+Ciertas palabras latinas nos dan una palabra **derivada** y palabras **culta**.
+]
+
+--
+
+.f4[
+  Un ejemplo:
+
+  Del Latin *strictu*, tenemos la palabra culta *estricto*, y la palabra derivada *estrecho*.
+]
+
+---
+
+## 3.1 DERIVADOS Y CULTISMOS
+
+.pull-left[
+.f4[
+**Derivados** o palabras derivadas evolucionaron .purple[normalmente] del latín al español.
+]
+]
+--
+
+.pull-right[
+.f4[
+**Cultismos**, o palabras cultas, .purple[no cambiaron] tanto.
+]
+]
+
+---
+
+class: left title-slide
+background-size: cover
+background-position: top center
+
+<br>
+<br>
+<br>
+<br>
+# Cultismos pertenecían al lenguaje litúrgico, científico o jurídico
+
+---
+
+class: left title-slide
+background-size: cover
+background-position: center
+
+
+<br>
+<br>
+<br>
+<br>
+# Los derivados vienen de las palabras que se usaba en la vida diaria.
+
+---
+class: left title-slide
+background-size: cover
+background-position: center
+
+<br>
+<br>
+<br>
+<br>
+# Podemos adivinar algunos cambios de los derivados?
+
+---
+
+## Actividad 3.1: Derivados (p 48-49)
+
+.pull-left[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "301a.png"))
+```
+
+
+```{r echo=FALSE}
+countdown::countdown(
+  minutes = 10, 
+  seconds = 0, 
+  warn_when = 1, 
+  style = "position: relative; width: min-content; margin: 1em auto;",
+  color_running_background = "#31b09e",
+  color_warning_background = "#f79334",
+  color_finished_background = "#b56b6f",
+  color_finished_text = "#eaeaea"
+)
+```
+
+]
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "301b.png"))
+```
+]
+
+---
+
+# Respuestas
+
+.pull-left[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "301a.png"))
+```
+]
+
+.pull-right[
+
+- Leche  
+- Hecho
+- ombligo 
+- colgar 
+- Labrar  
+- Obra
+- Cosa
+- Oreja 
+- Oveja 
+- Espejo
+]
+
+---
+
+# Respuestas b
+
+.pull-left[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "301b.png"))
+```
+]
+
+.pull-right[
+- Ojo
+- Cuajar
+- Nombre 
+- Nombrar 
+- Hombre 
+- Hembra 
+- Cadera 
+- Entero  
+- Madera
+- Frío  
+- Rayo
+]
+
+---
+
+class: left title-slide
+background-size: cover
+background-position: center
+
+<br>
+<br>
+<br>
+<br>
+# Las palabras cultas pueden dejar de ser cultas
+
+---
+
+# Las palabras cultas sin pareja derivada
+
+.pull-left[
+- Cuando **entra en el lenguaje popular**, una palabra que antes era culta puede emepezar a cambiar como si fuera una palabra derivada. 
+
+- Hay evidencia de eso en palabras que son derivadas de una palabra culta que **no tienen otra derivada** que habia sido seperado.  
+]
+
+--
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "302.png"))
+```
+]
+
+---
+
+## 3.2 PRONUNCIACIÓN DEL LATÍN 
+
+.pull-left[
+### 3.2.1 Consonantes
+- Las consonantes del alfabeto latino son parecidas a las del español con algunas excepciones notables.
+
+- El Cuadro 3.3 resume la pronunciación de las consonantes del latín temprano y clásico.
+]
+
+--
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "303a.png"))
+```
+]
+
+---
+
+## 3.2 PRONUNCIACIÓN DEL LATÍN 
+
+.pull-left[
+### 3.2.1 Consonantes b
+- Las consonantes del alfabeto latino son parecidas a las del español con algunas excepciones notables.
+
+- El Cuadro 3.3 resume la pronunciación de las consonantes del latín temprano y clásico.
+]
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "303b.png"))
+```
+]
+
+---
+
+## Pronunciación de la B Latina
+
+- En el latín, la **b latina** es siempre oclusiva:
+  - Ejemplo: bĭbō ['bi.bo]
+- En español, la primera **b** de *bebo* es oclusiva, pero no la segunda:
+  - Ejemplo: bebo ['be.βo]
+
+---
+
+## Pronunciación de la C Latina
+
+- La **c** del latín clásico siempre representa el sonido [k]:
+  - cantāre [kan.'taː.re]
+  - cēna ['keː.na]
+  - cĭrculāre [kir.ku.'laː.re]
+  - factu ['fak.tu]
+
+- En el latín vulgar, la **c** delante de **e** o **i** evoluciona:
+  - cēna ['tseː.na]
+  - cĭrcŭlāre ['tsir.ku.laː.re]
+  - Comparación con el español: chicharrón [tʃi.tʃa.'ron]
+
+---
+
+## Pronunciación de la G Latina
+
+- La **g** del latín clásico siempre representa el sonido [g]:
+  - Ejemplo en latín clásico:
+    - gĭgantes [gi.'gan.tes]
+    - gustāre [gus.'taː.re]
+    - grādu ['graː.du]
+    - gĕnte ['gen.te]
+    - frīgĭdu ['fri.gi.du]
+  - Comparación con el español:
+    - gago ['ga.ɣo]
+
+- En el latín vulgar, **ge** y **gi** evolucionaron a [je] y [ji]:
+  - gĕnte ['jen.te]
+  - frīgĭdu ['fri.ji.du]
+  - Comparación con el español: soy y siento
+
+---
+
+## Pronunciación de la H Latina
+
+- En el latín clásico, la **h** representa el sonido [h]:
+  - Ejemplos:
+    - habēre [ha.'beː.re]
+    - honōre [ho.'noː.re]
+
+- En el latín vulgar, la **h** es 'muda':
+  - habēre [a.'beː.re]
+  - honōre [o.'noː.re]
+
+---
+
+## Pronunciación de la J Latina
+
+- La **j** del latín es equivalente a la **y** del inglés *yes* y del español *soy*:
+  - Ejemplos:
+    - julĭu ['ju.li.u]
+  - Comparación con el español:
+    - soy [soj]
+    - siento ['sjen.to]
+
+- En latín vulgar, el sonido [j] transformó la fonología de las lenguas romances.
+
+---
+
+## Pronunciación de la Ele Doble Latina
+
+- La **ele doble** (ll) del latín se pronuncia como una **l** prolongada:
+  - Ejemplos:
+    - bĕlla ['bel.la]
+    - cabāllu [ka.'bal.lu]
+
+- Comparación con el español moderno: la elle (ll) tiene una pronunciación diferente.
+
+---
+
+## Pronunciación de la Combinación Ph en Latín
+
+- La combinación **ph** se pronuncia [f], igual que la **f**:
+  - Ejemplos de origen griego:
+    - phantasma [fan.'tas.ma]
+    - elĕphante [e.le.'fan.te]
+
+---
+
+## Pronunciación de la Combinación Rh en Latín
+
+- La combinación **rh** se pronuncia [r], igual que la **r** latina y la r sencilla española:
+  - Ejemplos de origen griego:
+    - rhythmu ['rit.mu]
+    - Rhēnus ['re.nus] (el río Rin)
+
+---
+
+## Pronunciación de la Q Latina
+
+- La **q** en latín siempre aparece en el grupo **qu** y representa el sonido [kw]:
+  - Ejemplos:
+    - quantu ['kwan.tu]
+    - quinto ['kwin.to]
+    - que ['kwe]
+    - quota ['kwo.ta]
+
+---
+
+## Pronunciación de la Combinación Th en Latín
+
+- La combinación **th** se pronuncia [t], igual que la **t**:
+  - Ejemplos de origen griego:
+    - thēsauru [te.'sau.ru]
+    - thema ['te.ma]
+    - cathĕdra ['ka.te.dra]
+
+---
+
+## Pronunciación de la V Latina
+
+- La **v** del latín clásico representa el sonido [w]:
+  - Ejemplos:
+    - vacante [wa.'kan.te]
+    - vĕnīre [we.'ni.re]
+
+- En el latín vulgar, se pronuncia [v]:
+  - vacante [va.'kan.te]
+  - vĕnīre [ve.'ni.re]
+  
+---
+
+## Video sobre Pronunciación del Latín
+
+https://www.youtube.com/watch?v=-WxG3TeNFVo
+
+---
+
+
+## Vocales Latinas
+
+- Las cinco letras **a, e, i, o, u** representan aproximadamente su cualidad latina.
+- La letra **y** representa el sonido [i], encontrada en palabras de origen griego.
+- Tres diptongos en latín clásico:
+  - au [aw]
+  - ae [aj]
+  - oe [oj]
+
+---
+
+## Cantidad de Vocales en Latín
+
+- Cada vocal se pronuncia larga o breve, resultando en diez vocales distintas y tres diptongos.
+- Vocales largas se representan con el signo (ˉ) y las breves con el signo (̆).
+
+---
+
+## Importancia de la Cantidad de las Vocales
+
+- La distinción entre vocales largas y breves es crucial por su relación con las vocales del latín vulgar y del español.
+- La cantidad de la vocal tiene valor distintivo o fonémico.
+
+---
+
+## Ejemplos de Vocales Largas y Breves
+
+.pull-left[
+- Pares mínimos:
+]
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "305.png"))
+```
+]
+---
+
+## Acentuación Latina
+
+- La acentuación de las palabras latinas es virtualmente idéntica a la de sus derivados españoles.
+- Reglas de acentuación son distintas y cruciales para entender el desarrollo fonológico del latín al español.
+
+---
+
+## Reglas de Acentuación
+
+1. En palabras de dos sílabas, la penúltima siempre es la tónica:
+   - caput ['ka.put]
+   - causa ['kaw.sa]
+   - amant ['a.mant]
+
+2. En palabras de tres o más sílabas, la penúltima es la tónica si su vocal es larga:
+   - ŭmbĭlīcu [um.bi.'li.ku]
+   - Diptongos tienen valor largo: jūdaeu [ju.'daj.u]
+   - Si la penúltima vocal es breve, la antepenúltima normalmente es la tónica:
+     - spĕcŭlu ['spe.ku.lu]
+
+---
+
+## Ejemplos de Verbos
+
+- Penúltima vocal larga:
+  - cantĀre
+  - habĒre
+  - venĪre
+
+- Penúltima vocal breve:
+  - scrĬbĕre
+  - fAcĕre
+
+---
+
+## Cambio en Latín Vulgar
+
+- En el latín vulgar, hubo vacilación y cambio de acento en palabras cuya penúltima vocal breve era seguida por dos consonantes o por consonante doble.
+- Ejemplos en Cuadro 3.6:
+
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "306.png"))
+```
+
+---
+
+# Para entender el desarrollo fonológico del latín al español, es importante identificar la sílaba tónica de cada palabra.
+
+
+---
+
+## Diptongos en Latín Clásico
+
+.pull-left[
+- Únicos diptongos: au, ae, oe
+]
+
+--
+
+
+.pull-right[
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "307.png"))
+```
+]
+---
+
+## División Silábica
+
+- Causa, graecu, poena tienen dos sílabas.
+- Jūdaeu tiene tres sílabas.
+
+---
+
+## Qu- en Latín
+
+- Qu- más vocal en latín representa una consonante [kw] labializada.
+- Ejemplos: aqua, quīntu tienen dos sílabas; quotīdĭānu y quadragēsĭma tienen cinco.
+
+---
+
+## Vocales Contiguas en Latín Clásico
+
+- Con excepción de la u de qu y los diptongos au, ae, oe, cada letra vocal del latín clásico representa un sonido vocálico.
+
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "308.png"))
+```
+
+---
+
+## Comparación con el Español
+
+- Palabras como julio, serie, área, nación, primario.
+- Palabras como piano, piojo, María Eugenia.
+- ¿Cuántas sílabas tienen? Compare con ejemplos latinos.
+
+---
+
+## Determinar la Sílaba Tónica en Latín
+
+- Siempre contar las sílabas según las normas ortográficas del latín clásico.
+- La posición de la sílaba tónica normalmente no cambia del latín antiguo al español moderno, excepto en los casos cubiertos por la tercera regla de acentuación y dos más que quedan por estudiar.
+
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("slides", "week3", "img", "309.png"))
+```
+---
