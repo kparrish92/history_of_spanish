@@ -1,19 +1,15 @@
 ---
-title: "Historia de la lengua española"
-subtitle: "C3: Algunos Detalles"
-author: "Kyle Parrish"
+title: "Semana 3: Algunos detalles"
+subtitle: 'La Historia de la Lengua Española'
+author  : "Kyle Parrish"
+date    : "Goethe Uni Frankurt</br>Summer 2024</br>Last update: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
+    css: [default, hygge, my-css.css, rutgers-fonts]
     lib_dir: libs
-    chakra: libs/remark-latest.min.js
-    css: xaringan-themer.css
-    seal: false
     nature:
-      highlightStyle: github
-      highlightLines: true
       countIncrementalSlides: true
       ratio: 16:9
-      slideNumberFormat: "%current%"
 ---
 
 ```{r setup, include=FALSE}
@@ -107,10 +103,7 @@ slides_from_images <- function(
 options("slide_image_placeholder" = FALSE)
 ```
 
-class: left title-slide
-background-size: cover
-background-position: top center
-
+class: title-slide-section, middle
 <br>
 <br>
 <br>
@@ -192,9 +185,7 @@ Ciertas palabras latinas nos dan una palabra **derivada** y palabras **culta**.
 
 ---
 
-class: left title-slide
-background-size: cover
-background-position: top center
+class: title-slide-section, middle
 
 <br>
 <br>
@@ -204,9 +195,7 @@ background-position: top center
 
 ---
 
-class: left title-slide
-background-size: cover
-background-position: center
+class: title-slide-section, middle
 
 
 <br>
@@ -216,9 +205,8 @@ background-position: center
 # Los derivados vienen de las palabras que se usaba en la vida diaria.
 
 ---
-class: left title-slide
-background-size: cover
-background-position: center
+
+class: title-slide-section, middle
 
 <br>
 <br>
@@ -307,14 +295,8 @@ knitr::include_graphics(here::here("slides", "week3", "img", "301b.png"))
 
 ---
 
-class: left title-slide
-background-size: cover
-background-position: center
+class: title-slide-section, middle
 
-<br>
-<br>
-<br>
-<br>
 # Las palabras cultas pueden dejar de ser cultas
 
 ---
@@ -509,152 +491,3 @@ knitr::include_graphics(here::here("slides", "week3", "img", "303b.png"))
 
 https://www.youtube.com/watch?v=-WxG3TeNFVo
 
----
-
-
-## Vocales Latinas
-
-- Las cinco letras **a, e, i, o, u** representan aproximadamente su cualidad latina.
-- La letra **y** representa el sonido [i], encontrada en palabras de origen griego.
-- Tres diptongos en latín clásico:
-  - au [aw]
-  - ae [aj]
-  - oe [oj]
-
----
-
-## Cantidad de Vocales en Latín
-
-- Cada vocal se pronuncia larga o breve, resultando en diez vocales distintas y tres diptongos.
-- Vocales largas se representan con el signo (ˉ) y las breves con el signo (̆).
-
----
-
-## Importancia de la Cantidad de las Vocales
-
-- La distinción entre vocales largas y breves es crucial por su relación con las vocales del latín vulgar y del español.
-- La cantidad de la vocal tiene valor distintivo o fonémico.
-
----
-
-## Ejemplos de Vocales Largas y Breves
-
-.pull-left[
-- Pares mínimos:
-]
-
-.pull-right[
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("slides", "week3", "img", "305.png"))
-```
-]
----
-
-## Acentuación Latina
-
-- La acentuación de las palabras latinas es virtualmente idéntica a la de sus derivados españoles.
-- Reglas de acentuación son distintas y cruciales para entender el desarrollo fonológico del latín al español.
-
----
-
-## Reglas de Acentuación
-
-1. En palabras de dos sílabas, la penúltima siempre es la tónica:
-   - caput ['ka.put]
-   - causa ['kaw.sa]
-   - amant ['a.mant]
-
-2. En palabras de tres o más sílabas, la penúltima es la tónica si su vocal es larga:
-   - ŭmbĭlīcu [um.bi.'li.ku]
-   - Diptongos tienen valor largo: jūdaeu [ju.'daj.u]
-   - Si la penúltima vocal es breve, la antepenúltima normalmente es la tónica:
-     - spĕcŭlu ['spe.ku.lu]
-
----
-
-## Ejemplos de Verbos
-
-- Penúltima vocal larga:
-  - cantĀre
-  - habĒre
-  - venĪre
-
-- Penúltima vocal breve:
-  - scrĬbĕre
-  - fAcĕre
-
----
-
-## Cambio en Latín Vulgar
-
-- En el latín vulgar, hubo vacilación y cambio de acento en palabras cuya penúltima vocal breve era seguida por dos consonantes o por consonante doble.
-- Ejemplos en Cuadro 3.6:
-
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("slides", "week3", "img", "306.png"))
-```
-
----
-
-# Para entender el desarrollo fonológico del latín al español, es importante identificar la sílaba tónica de cada palabra.
-
-
----
-
-## Diptongos en Latín Clásico
-
-.pull-left[
-- Únicos diptongos: au, ae, oe
-]
-
---
-
-
-.pull-right[
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("slides", "week3", "img", "307.png"))
-```
-]
----
-
-## División Silábica
-
-- Causa, graecu, poena tienen dos sílabas.
-- Jūdaeu tiene tres sílabas.
-
----
-
-## Qu- en Latín
-
-- Qu- más vocal en latín representa una consonante [kw] labializada.
-- Ejemplos: aqua, quīntu tienen dos sílabas; quotīdĭānu y quadragēsĭma tienen cinco.
-
----
-
-## Vocales Contiguas en Latín Clásico
-
-- Con excepción de la u de qu y los diptongos au, ae, oe, cada letra vocal del latín clásico representa un sonido vocálico.
-
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("slides", "week3", "img", "308.png"))
-```
-
----
-
-## Comparación con el Español
-
-- Palabras como julio, serie, área, nación, primario.
-- Palabras como piano, piojo, María Eugenia.
-- ¿Cuántas sílabas tienen? Compare con ejemplos latinos.
-
----
-
-## Determinar la Sílaba Tónica en Latín
-
-- Siempre contar las sílabas según las normas ortográficas del latín clásico.
-- La posición de la sílaba tónica normalmente no cambia del latín antiguo al español moderno, excepto en los casos cubiertos por la tercera regla de acentuación y dos más que quedan por estudiar.
-
-```{r, echo = FALSE}
-knitr::include_graphics(here::here("slides", "week3", "img", "309.png"))
-```
----

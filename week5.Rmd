@@ -1,0 +1,323 @@
+---
+title: "Semana 5: Las vocales del latín vulgar"
+subtitle: 'La Historia de la Lengua Española'
+author  : "Kyle Parrish"
+date    : "Goethe Uni Frankfurt</br>Summer 2024</br>Last update: `r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default, hygge, my-css.css, rutgers-fonts]
+    lib_dir: libs
+    nature:
+      countIncrementalSlides: true
+      ratio: 16:9
+---
+```{r, include = FALSE}
+library(here)
+library(tidyverse)
+library(lme4)
+```
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(
+  comment = '', fig.width = 6, fig.height = 6, message = FALSE, warning = FALSE, echo = FALSE
+)
+```
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Había **10 vocales** en latín.</h2> <!-- Centered h1 text -->
+
+---
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Había **10 vocales** en latín **clásico**.</h2> <!-- Centered h1 text -->
+
+---
+
+background-image: url(./slides/week3/img/4.20.png)
+background-size: contain
+
+---
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Había **7 vocales** en latín **vulgar**.</h2> <!-- Centered h1 text -->
+
+---
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Se pierde **la cantidad** vocálica.</h2> <!-- Centered h1 text -->
+
+--
+
+<br>
+<h4 style="text-align: center;">Hay 2 tipos de "e", y "o", y una versión de las demás.</h4> <!-- Centered h1 text -->
+
+--
+
+<br>
+<h4 style="text-align: center;">Las versiones se distinguen a través de su **calidad**.</h4> <!-- Centered h1 text -->
+
+
+
+---
+
+background-image: url(./slides/week3/img/4.40.png)
+background-size: contain
+
+---
+
+
+
+background-image: url(./slides/week3/img/4.50.png)
+background-size: contain
+
+---
+
+background-image: url(./slides/week3/img/4.70.png)
+background-size: contain
+
+---
+
+background-image: url(./slides/week3/img/4.80.png)
+background-size: contain
+
+---
+
+background-image: url(./slides/week3/img/4.420.png)
+background-size: contain
+
+---
+
+# Respuestas
+
+.pull-left[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.420.png"))
+```
+]
+
+--
+
+.pull-right[
+- menos 
+
+- lengua 
+
+- dices 
+
+- tres
+
+- freno
+
+- pena
+
+- cena 
+
+- feo
+
+]
+
+---
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Fun fact: La **Real Academia Española** puede ayudarnos</h2> <!-- Centered h1 text -->
+
+---
+
+background-image: url(./slides/week3/img/rae.png)
+background-size: contain
+
+---
+
+background-image: url(./slides/week3/img/rae_res.png)
+background-size: contain
+
+---
+
+# La Real Academia Española
+
+.pull-left[
+- Si tienes una hipotesis sobre una palabra (e.g., creo que foedus -> feo), se puede buscar la palabra española en la RAE (rae.es)
+
+- En muchos casos, el diccionario de la RAE tiene la palabra latina que nos da la palabra buscada. 
+]
+
+.pull-right[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "rae_res.png"))
+```
+]
+
+---
+
+
+background-image: url(./slides/week3/img/4.430.png)
+background-size: contain
+
+---
+
+
+# Respuestas
+
+.pull-left[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.430.png"))
+```
+]
+
+--
+
+.pull-right[
+- niego 
+
+- negar 
+
+- quiero 
+
+- querer
+
+- ciego
+
+- cegar
+
+- murciégalo
+]
+
+---
+
+# Un par de cosas importantes:
+
+.pull-left[
+- Con los verbos: los infinitivos llevan acento prosódico en **la última sílaba**. Ej. penSAR, no PENsar.
+
+- Con los verbos conjugados, mueven el acento prosódico normalmente a **la penúltima sílaba**: Ej. HAblo, no haBLO.
+]
+
+.pull-right[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.430b.png"))
+```
+]
+
+---
+
+background-image: url(./slides/week3/img/4.430b.png)
+background-size: contain
+
+---
+
+# Respuestas:
+
+
+.pull-left[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.430b.png"))
+```
+]
+
+--
+
+.pull-right[
+- pienso 
+
+- piensas
+
+- piensa 
+
+- pensamos 
+
+- pensaís 
+
+- piensan
+]
+
+
+---
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">*-ariu* cambió a *-ero* por contacto con **la yod**</h2> <!-- Centered h1 text -->
+
+
+---
+
+background-image: url(./slides/week3/img/4.550.png)
+background-size: contain
+
+---
+
+# Respuestas
+
+.pull-left[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.550.png"))
+```
+]
+
+.pull-right[
+- primero
+
+- enero 
+
+- caldera 
+
+- foguera 
+
+- soltera
+]
+
+---
+
+background-image: url(./slides/week3/img/4.460.png)
+background-size: contain
+
+---
+
+background-image: url(./slides/week3/img/4.620.png)
+background-size: contain
+
+---
+
+# Respuestas
+
+.pull-left[
+```{r}
+knitr::include_graphics(here::here("slides", "week3", "img", "4.620.png"))
+```
+]
+
+.pull-right[
+- nuevo
+
+- novedad 
+
+- huésped 
+
+- muela 
+
+- mueble
+
+- probar
+
+- pruebo 
+
+- pruebas 
+
+- prueba
+
+- probamos
+
+- probaís 
+
+- prueban
+
+]
+
+---
+
+class: title-slide-section, middle
+
+<h2 style="text-align: center;">Course Review time!</h2> <!-- Centered h1 text -->

@@ -2,7 +2,7 @@
 title: "Semana 4: Las vocales del latín y la acentuación"
 subtitle: 'La Historia de la Lengua Española'
 author  : "Kyle Parrish"
-date    : "Goethe Uni Frajfurt</br>Fall 2022</br>Last update: `r Sys.Date()`"
+date    : "Goethe Uni Frankfurt</br>Summer 2024</br>Last update: `r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: [default, hygge, my-css.css, rutgers-fonts]
